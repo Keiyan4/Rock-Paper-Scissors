@@ -1,13 +1,14 @@
 let humanScore = 0;
 let computerScore = 0;
 
+
 const results = document.querySelector("#results");
 const humanScorePara = results.children[0];
 const computerScorePara = results.children[1];
 const gameResultPara = results.querySelector("#game-result");
 
 function playRound(humanChoice) {
-    const compChoice = getComputerChoice(); // Call the function correctly
+    const compChoice = getComputerChoice(); 
 
     if (humanChoice === compChoice) {
         gameResultPara.textContent = "It's a tie!";
@@ -54,7 +55,7 @@ function disableButtons() {
     document.querySelector("#scissors").disabled = true;
 }
 
-// Event listeners
+
 document.querySelector("#rock").addEventListener("click", () => playRound("rock"));
 document.querySelector("#paper").addEventListener("click", () => playRound("paper"));
 document.querySelector("#scissors").addEventListener("click", () => playRound("scissors"));
